@@ -3,8 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "pyright", "ruff", "lua_ls", "rust_analyzer", "clangd"}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -22,3 +21,9 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+
+-- lspconfig.pyright.setup({
+--   on_attach = nvlsp.on_attach,
+--   capabilities = nvlsp.capabilities,
+--   filetypes = {"python"},
+-- })
